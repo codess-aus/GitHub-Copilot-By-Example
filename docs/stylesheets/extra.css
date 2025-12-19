@@ -1,0 +1,265 @@
+/* Custom gradient color scheme from dark blue to magenta */
+:root {
+  --gradient-start: #0a1628;
+  --gradient-mid: #1e3a8a;
+  --gradient-end: #c026d3;
+  --gradient-accent: #ec4899;
+}
+
+/* Header gradient background */
+.md-header {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%) !important;
+}
+
+/* Navigation tabs gradient */
+.md-tabs {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%) !important;
+}
+
+/* Dark mode - slate scheme with bright text for accessibility */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1e3a8a;
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark: #1e40af;
+  --md-accent-fg-color: #ec4899;
+  --md-accent-fg-color--transparent: rgba(236, 72, 153, 0.1);
+  
+  /* Override default grey text with bright white text for accessibility */
+  --md-typeset-color: #ffffff;
+  --md-default-fg-color: #ffffff;
+  --md-default-fg-color--light: #f5f5f5;
+  --md-default-fg-color--lighter: #e0e0e0;
+  --md-default-fg-color--lightest: #d0d0d0;
+  
+  /* Ensure code text is also bright */
+  --md-code-fg-color: #f5f5f5;
+  --md-code-bg-color: #1a1a1a;
+  
+  /* Navigation text bright white */
+  --md-nav-fg-color: #ffffff;
+}
+
+/* Light mode - default scheme */
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #1e3a8a;
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark: #1e40af;
+  --md-accent-fg-color: #ec4899;
+  --md-accent-fg-color--transparent: rgba(236, 72, 153, 0.1);
+}
+
+/* Links with gradient hover effect - dark mode */
+[data-md-color-scheme="slate"] .md-content a {
+  color: #f0abfc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+[data-md-color-scheme="slate"] .md-content a:hover {
+  color: #fda4af;
+  text-decoration: underline;
+}
+
+/* Links with gradient hover effect - light mode */
+[data-md-color-scheme="default"] .md-content a {
+  color: #a855f7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+[data-md-color-scheme="default"] .md-content a:hover {
+  color: #ec4899;
+  text-decoration: underline;
+}
+
+/* Button gradient styling */
+.md-button {
+  background: linear-gradient(135deg, var(--gradient-mid) 0%, var(--gradient-end) 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.md-button:hover {
+  background: linear-gradient(135deg, var(--gradient-end) 0%, var(--gradient-accent) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(192, 38, 211, 0.3);
+}
+
+/* Code block styling with accent */
+.highlight {
+  border-left: 4px solid var(--gradient-end);
+}
+
+/* Admonition gradient accents */
+.admonition {
+  border-left-width: 4px;
+}
+
+.admonition.tip {
+  border-left-color: var(--gradient-end);
+}
+
+.admonition.info {
+  border-left-color: var(--gradient-mid);
+}
+
+.admonition.warning {
+  border-left-color: var(--gradient-accent);
+}
+
+/* Search box styling */
+.md-search__input {
+  background-color: rgba(30, 58, 138, 0.3);
+  border: 1px solid var(--gradient-mid);
+}
+
+.md-search__input:focus {
+  border-color: var(--gradient-end);
+  box-shadow: 0 0 0 2px rgba(192, 38, 211, 0.2);
+}
+
+/* Navigation items hover effect */
+.md-nav__item .md-nav__link--active {
+  color: var(--gradient-end) !important;
+}
+
+.md-nav__item .md-nav__link:hover {
+  color: var(--gradient-accent) !important;
+}
+
+/* Table styling with gradient header */
+[data-md-color-scheme="slate"] table thead {
+  background: linear-gradient(135deg, var(--gradient-mid) 0%, var(--gradient-end) 100%);
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] table thead {
+  background: linear-gradient(135deg, #3b82f6 0%, #a855f7 100%);
+  color: #ffffff;
+}
+
+/* Responsive design improvements */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+  }
+}
+
+/* Accessibility improvements */
+:focus-visible {
+  outline: 2px solid var(--gradient-end);
+  outline-offset: 2px;
+}
+
+/* High contrast for accessibility */
+@media (prefers-contrast: high) {
+  .md-content a {
+    text-decoration: underline;
+  }
+  
+  .md-button {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Footer gradient */
+[data-md-color-scheme="slate"] .md-footer {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-footer {
+  background: linear-gradient(135deg, #1e40af 0%, #7c3aed 50%, #a855f7 100%);
+  color: #ffffff;
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card-like sections with subtle gradient borders */
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, var(--gradient-mid) 0%, var(--gradient-end) 100%) 1;
+  padding-bottom: 0.5em;
+  color: #ffffff;
+}
+
+[data-md-color-scheme="default"] .md-typeset h2 {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, #3b82f6 0%, #a855f7 100%) 1;
+  padding-bottom: 0.5em;
+  color: #1e293b;
+}
+
+/* Ensure all headings are bright in dark mode */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2,
+[data-md-color-scheme="slate"] .md-typeset h3,
+[data-md-color-scheme="slate"] .md-typeset h4,
+[data-md-color-scheme="slate"] .md-typeset h5,
+[data-md-color-scheme="slate"] .md-typeset h6 {
+  color: #ffffff !important;
+}
+
+/* Ensure paragraphs and lists are bright white in dark mode */
+[data-md-color-scheme="slate"] .md-typeset p,
+[data-md-color-scheme="slate"] .md-typeset li,
+[data-md-color-scheme="slate"] .md-typeset td,
+[data-md-color-scheme="slate"] .md-typeset th,
+[data-md-color-scheme="slate"] .md-typeset blockquote {
+  color: #ffffff !important;
+}
+
+/* Navigation text bright white in dark mode */
+[data-md-color-scheme="slate"] .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav__title {
+  color: #ffffff !important;
+}
+
+/* Admonition text bright in dark mode */
+[data-md-color-scheme="slate"] .admonition-title {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .admonition p {
+  color: #f5f5f5 !important;
+}
+
+/* Light mode gradient for header - lighter version */
+[data-md-color-scheme="default"] .md-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 50%, #a855f7 100%) !important;
+}
+
+[data-md-color-scheme="default"] .md-tabs {
+  background: linear-gradient(135deg, #3b82f6 0%, #7c3aed 50%, #a855f7 100%) !important;
+}
+
+/* Ensure header text is white in both modes */
+.md-header__title,
+.md-header__button,
+.md-tabs__link {
+  color: #ffffff !important;
+}
+
+/* Search input styling for both modes */
+[data-md-color-scheme="default"] .md-search__input {
+  background-color: rgba(59, 130, 246, 0.1);
+  border: 1px solid #3b82f6;
+  color: #1e293b;
+}
+
+[data-md-color-scheme="default"] .md-search__input:focus {
+  border-color: #a855f7;
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.2);
+}
