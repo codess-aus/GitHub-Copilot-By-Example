@@ -11,9 +11,22 @@ repo_url: https://github.com/codess-aus/GitHub-Copilot-By-Example
 theme:
   name: material
   palette:
-    scheme: slate
-    primary: deep purple
-    accent: pink
+    # Palette toggle for dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    # Palette toggle for light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: pink
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
   font:
     text: Roboto
     code: Roboto Mono
