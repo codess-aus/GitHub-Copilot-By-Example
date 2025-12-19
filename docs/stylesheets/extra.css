@@ -1,0 +1,148 @@
+/* Custom gradient color scheme from dark blue to magenta */
+:root {
+  --gradient-start: #0a1628;
+  --gradient-mid: #1e3a8a;
+  --gradient-end: #c026d3;
+  --gradient-accent: #ec4899;
+}
+
+/* Header gradient background */
+.md-header {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%) !important;
+}
+
+/* Navigation tabs gradient */
+.md-tabs {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%) !important;
+}
+
+/* Primary color adjustments */
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: #1e3a8a;
+  --md-primary-fg-color--light: #3b82f6;
+  --md-primary-fg-color--dark: #1e40af;
+  --md-accent-fg-color: #ec4899;
+  --md-accent-fg-color--transparent: rgba(236, 72, 153, 0.1);
+}
+
+/* Links with gradient hover effect */
+.md-content a {
+  color: #c026d3;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.md-content a:hover {
+  color: #ec4899;
+  text-decoration: underline;
+}
+
+/* Button gradient styling */
+.md-button {
+  background: linear-gradient(135deg, var(--gradient-mid) 0%, var(--gradient-end) 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.md-button:hover {
+  background: linear-gradient(135deg, var(--gradient-end) 0%, var(--gradient-accent) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(192, 38, 211, 0.3);
+}
+
+/* Code block styling with accent */
+.highlight {
+  border-left: 4px solid var(--gradient-end);
+}
+
+/* Admonition gradient accents */
+.admonition {
+  border-left-width: 4px;
+}
+
+.admonition.tip {
+  border-left-color: var(--gradient-end);
+}
+
+.admonition.info {
+  border-left-color: var(--gradient-mid);
+}
+
+.admonition.warning {
+  border-left-color: var(--gradient-accent);
+}
+
+/* Search box styling */
+.md-search__input {
+  background-color: rgba(30, 58, 138, 0.3);
+  border: 1px solid var(--gradient-mid);
+}
+
+.md-search__input:focus {
+  border-color: var(--gradient-end);
+  box-shadow: 0 0 0 2px rgba(192, 38, 211, 0.2);
+}
+
+/* Navigation items hover effect */
+.md-nav__item .md-nav__link--active {
+  color: var(--gradient-end) !important;
+}
+
+.md-nav__item .md-nav__link:hover {
+  color: var(--gradient-accent) !important;
+}
+
+/* Table styling with gradient header */
+table thead {
+  background: linear-gradient(135deg, var(--gradient-mid) 0%, var(--gradient-end) 100%);
+}
+
+/* Responsive design improvements */
+@media screen and (max-width: 76.1875em) {
+  .md-nav--primary .md-nav__title {
+    background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 100%);
+  }
+}
+
+/* Accessibility improvements */
+:focus-visible {
+  outline: 2px solid var(--gradient-end);
+  outline-offset: 2px;
+}
+
+/* High contrast for accessibility */
+@media (prefers-contrast: high) {
+  .md-content a {
+    text-decoration: underline;
+  }
+  
+  .md-button {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Footer gradient */
+.md-footer {
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-mid) 50%, var(--gradient-end) 100%);
+}
+
+/* Smooth scrolling for better UX */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card-like sections with subtle gradient borders */
+.md-typeset h2 {
+  border-bottom: 2px solid;
+  border-image: linear-gradient(90deg, var(--gradient-mid) 0%, var(--gradient-end) 100%) 1;
+  padding-bottom: 0.5em;
+}

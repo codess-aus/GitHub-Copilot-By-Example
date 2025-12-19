@@ -1,0 +1,75 @@
+site_name: GitHub Copilot By Example
+site_description: A comprehensive guide to GitHub Copilot with practical examples and best practices
+site_author: codess-aus
+site_url: https://codess-aus.github.io/GitHub-Copilot-By-Example/
+
+# Repository
+repo_name: codess-aus/GitHub-Copilot-By-Example
+repo_url: https://github.com/codess-aus/GitHub-Copilot-By-Example
+
+# Theme
+theme:
+  name: material
+  palette:
+    scheme: slate
+    primary: deep purple
+    accent: pink
+  font:
+    text: Roboto
+    code: Roboto Mono
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+# Navigation
+nav:
+  - Home: index.md
+  - Setup: setup.md
+  - Copilot Deep Dive - Concepts & Capabilities: copilot-deep-dive.md
+  - Practical Foundations - Coding with Copilot: practical-foundations.md
+  - Best Practices for Secure & Effective Copilot Coding: best-practices.md
+  - Advanced Copilot - Agent Mode, Integrations, Extensions: advanced-copilot.md
+  - Context Engineering & Prompting Techniques: context-engineering.md
+  - Putting it all together - Mini Project: mini-project.md
+
+# Plugins
+plugins:
+  - search
+  - tags
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+
+# Extra CSS
+extra_css:
+  - stylesheets/extra.css
+
+# Extra settings
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/codess-aus/GitHub-Copilot-By-Example
