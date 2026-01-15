@@ -392,7 +392,60 @@ button:focus {
   }
 }
 
-/* Hero section styling */
+/* Site banner at top of home page */
+.site-banner {
+  position: relative;
+  width: calc(100% + 4rem);
+  margin: -2rem -2rem 3rem -2rem;
+  height: 400px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--gradient-start) 0%, var(--gradient-end) 100%);
+}
+
+.site-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 1;
+}
+
+.banner-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.75) 0%, rgba(118, 75, 162, 0.75) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: var(--spacing-xl);
+}
+
+.banner-overlay h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  margin: 0 0 var(--spacing-sm) 0;
+  color: white !important;
+  background: none !important;
+  -webkit-text-fill-color: white !important;
+  letter-spacing: -0.5px;
+}
+
+.banner-subtitle {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  opacity: 0.95;
+  max-width: 600px;
+}
+
+/* Hero section styling for chapter pages */
 .hero-section {
   position: relative;
   width: 100%;
@@ -562,6 +615,20 @@ button:focus {
 @media screen and (max-width: 768px) {
   .card-grid {
     grid-template-columns: 1fr;
+  }
+  
+  .site-banner {
+    height: 250px;
+    margin: -1rem -1rem 2rem -1rem;
+    width: calc(100% + 2rem);
+  }
+  
+  .banner-overlay h1 {
+    font-size: 2rem;
+  }
+  
+  .banner-subtitle {
+    font-size: 1rem;
   }
   
   .hero-section {

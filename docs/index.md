@@ -1,4 +1,10 @@
-# Welcome to GitHub Copilot By Example
+<div class="site-banner">
+  <img src="images/Banner.png" alt="GitHub Copilot By Example">
+  <div class="banner-overlay">
+    <h1>GitHub Copilot By Example</h1>
+    <p class="banner-subtitle">Your comprehensive guide to mastering AI-powered coding</p>
+  </div>
+</div>
 
 Welcome to your comprehensive guide to mastering GitHub Copilot! This guide provides practical examples, best practices, and hands-on projects to help you leverage AI-powered coding assistance effectively.
 
