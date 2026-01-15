@@ -6,7 +6,7 @@ A comprehensive, hands-on workshop for mastering GitHub Copilot with real-world 
 
 Design, implement, and ship real AI-assisted software with trusted development workflows using GitHub Copilot.
 
-AI-assisted development is no longer a novelty—it's becoming a core skill for modern developers. This workshop goes beyond autocomplete and demos to teach you how to use GitHub Copilot as a true AI pair programmer that understands context, follows your intent, and helps you write cleaner, more secure, production-ready code.
+AI-assisted development is no longer a novelty, it's becoming a core skill for modern developers. This workshop goes beyond autocomplete and demos to teach you how to use GitHub Copilot as a true AI pair programmer that understands context, follows your intent, and helps you write cleaner, more secure, production-ready code.
 
 Through real-world examples and guided exercises, you'll explore Copilot's capabilities, Agent Mode, and advanced prompting techniques, while learning practical guardrails for security and maintainability.
 

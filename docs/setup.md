@@ -1,4 +1,9 @@
-# Setup
+<div class="hero-section">
+  <img src="images/setup-hero.jpg" alt="Setup GitHub Copilot" onerror="this.style.display='none'">
+  <div class="hero-overlay">
+    <h1>Setup</h1>
+  </div>
+</div>
 
 Get started with GitHub Copilot by installing and configuring it in your development environment.
 
