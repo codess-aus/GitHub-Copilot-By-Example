@@ -1,9 +1,4 @@
-<div class="hero-section">
-  <img src="images/advanced-hero.jpg" alt="Advanced Copilot" onerror="this.style.display='none'">
-  <div class="hero-overlay">
-    <h1>Advanced Copilot: Agent Mode, Integrations, Extensions</h1>
-  </div>
-</div>
+# Advanced Copilot: Agent Mode, Integrations, Extensions
 
 Explore advanced features of GitHub Copilot including agent mode, integrations with development tools, and extensions.
 

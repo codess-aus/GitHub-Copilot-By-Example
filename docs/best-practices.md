@@ -1,9 +1,4 @@
-<div class="hero-section">
-  <img src="images/best-practices-hero.jpg" alt="Best Practices" onerror="this.style.display='none'">
-  <div class="hero-overlay">
-    <h1>Best Practices for Secure & Effective Coding</h1>
-  </div>
-</div>
+# Best Practices for Secure & Effective Copilot Coding
 
 Learn how to use GitHub Copilot responsibly while maintaining code quality, security, and best practices.
 

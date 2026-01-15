@@ -1,9 +1,4 @@
-<div class="hero-section">
-  <img src="images/practical-hero.jpg" alt="Practical Foundations" onerror="this.style.display='none'">
-  <div class="hero-overlay">
-    <h1>Practical Foundations: Coding with Copilot</h1>
-  </div>
-</div>
+# Practical Foundations: Coding with Copilot
 
 Learn hands-on techniques for effective coding with GitHub Copilot through practical examples.
 

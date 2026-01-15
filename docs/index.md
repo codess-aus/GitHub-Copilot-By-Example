@@ -1,101 +1,93 @@
-<div class="site-banner">
-  <img src="images/Banner.png" alt="GitHub Copilot By Example">
-  <div class="banner-overlay">
-    <h1>GitHub Copilot By Example</h1>
-    <p class="banner-subtitle">Your comprehensive guide to mastering AI-powered coding</p>
-  </div>
-</div>
-
-Welcome to your comprehensive guide to mastering GitHub Copilot! This guide provides practical examples, best practices, and hands-on projects to help you leverage AI-powered coding assistance effectively.
+<div class="main-content">
 
 ## What You'll Learn
 
 This guide is structured to take you from setup to advanced usage of GitHub Copilot. Choose a chapter below to begin your journey:
 
-<div class="card-grid">
-  <a href="setup/" class="chapter-card">
-    <div class="chapter-card-image">
+<div class="blog-grid">
+  <article class="blog-card">
+    <div class="blog-card-image">
       <img src="images/setup-hero.jpg" alt="Setup GitHub Copilot" onerror="this.style.display='none'">
-      <div class="chapter-card-date">Chapter 1</div>
     </div>
-    <div class="chapter-card-content">
-      <h3 class="chapter-card-title">Setup</h3>
-      <p class="chapter-card-description">Get started with GitHub Copilot installation and configuration across different IDEs and environments.</p>
-      <span class="chapter-card-link">Get started</span>
+    <div class="blog-card-content">
+      <span class="blog-date">Chapter 1</span>
+      <h3 class="blog-title"><a href="setup/">Setup</a></h3>
+      <p class="blog-excerpt">Get started with GitHub Copilot installation and configuration across different IDEs and environments.</p>
+      <a href="setup/" class="read-more">Get started →</a>
     </div>
-  </a>
+  </article>
 
-  <a href="copilot-deep-dive/" class="chapter-card">
-    <div class="chapter-card-image">
+  <article class="blog-card">
+    <div class="blog-card-image">
       <img src="images/deep-dive-hero.jpg" alt="Copilot Deep Dive" onerror="this.style.display='none'">
-      <div class="chapter-card-date">Chapter 2</div>
     </div>
-    <div class="chapter-card-content">
-      <h3 class="chapter-card-title">Copilot Deep Dive: Concepts & Capabilities</h3>
-      <p class="chapter-card-description">Understand the fundamentals, mental models, and powerful features of GitHub Copilot.</p>
-      <span class="chapter-card-link">Learn more</span>
+    <div class="blog-card-content">
+      <span class="blog-date">Chapter 2</span>
+      <h3 class="blog-title"><a href="copilot-deep-dive/">Copilot Deep Dive: Concepts & Capabilities</a></h3>
+      <p class="blog-excerpt">Understand the fundamentals, mental models, and powerful features of GitHub Copilot.</p>
+      <a href="copilot-deep-dive/" class="read-more">Learn more →</a>
     </div>
-  </a>
+  </article>
 
-  <a href="practical-foundations/" class="chapter-card">
-    <div class="chapter-card-image">
+  <article class="blog-card">
+    <div class="blog-card-image">
       <img src="images/practical-hero.jpg" alt="Practical Foundations" onerror="this.style.display='none'">
-      <div class="chapter-card-date">Chapter 3</div>
     </div>
-    <div class="chapter-card-content">
-      <h3 class="chapter-card-title">Practical Foundations: Coding with Copilot</h3>
-      <p class="chapter-card-description">Learn hands-on coding techniques, scaffolding workflows, and practical patterns for daily development.</p>
-      <span class="chapter-card-link">Start coding</span>
+    <div class="blog-card-content">
+      <span class="blog-date">Chapter 3</span>
+      <h3 class="blog-title"><a href="practical-foundations/">Practical Foundations: Coding with Copilot</a></h3>
+      <p class="blog-excerpt">Learn hands-on coding techniques, scaffolding workflows, and practical patterns for daily development.</p>
+      <a href="practical-foundations/" class="read-more">Start coding →</a>
     </div>
-  </a>
+  </article>
 
-  <a href="best-practices/" class="chapter-card">
-    <div class="chapter-card-image">
+  <article class="blog-card">
+    <div class="blog-card-image">
       <img src="images/best-practices-hero.jpg" alt="Best Practices" onerror="this.style.display='none'">
-      <div class="chapter-card-date">Chapter 4</div>
     </div>
-    <div class="chapter-card-content">
-      <h3 class="chapter-card-title">Best Practices for Secure & Effective Coding</h3>
-      <p class="chapter-card-description">Write secure, maintainable code with daily workflows and production-ready patterns.</p>
-      <span class="chapter-card-link">Learn practices</span>
+    <div class="blog-card-content">
+      <span class="blog-date">Chapter 4</span>
+      <h3 class="blog-title"><a href="best-practices/">Best Practices for Secure & Effective Coding</a></h3>
+      <p class="blog-excerpt">Write secure, maintainable code with daily workflows and production-ready patterns.</p>
+      <a href="best-practices/" class="read-more">Learn practices →</a>
     </div>
-  </a>
+  </article>
 
-  <a href="advanced-copilot/" class="chapter-card">
-    <div class="chapter-card-image">
+  <article class="blog-card">
+    <div class="blog-card-image">
       <img src="images/advanced-hero.jpg" alt="Advanced Copilot" onerror="this.style.display='none'">
-      <div class="chapter-card-date">Chapter 5</div>
     </div>
-    <div class="chapter-card-content">
-      <h3 class="chapter-card-title">Advanced Copilot: Agent Mode, Integrations, Extensions</h3>
-      <p class="chapter-card-description">Explore advanced features, multi-file edits, and when to use Chat vs Agent Mode.</p>
-      <span class="chapter-card-link">Go advanced</span>
+    <div class="blog-card-content">
+      <span class="blog-date">Chapter 5</span>
+      <h3 class="blog-title"><a href="advanced-copilot/">Advanced Copilot: Agent Mode, Integrations, Extensions</a></h3>
+      <p class="blog-excerpt">Explore advanced features, multi-file edits, and when to use Chat vs Agent Mode.</p>
+      <a href="advanced-copilot/" class="read-more">Go advanced →</a>
     </div>
-  </a>
+  </article>
 
-  <a href="context-engineering/" class="chapter-card">
-    <div class="chapter-card-image">
+  <article class="blog-card">
+    <div class="blog-card-image">
       <img src="images/context-hero.jpg" alt="Context Engineering" onerror="this.style.display='none'">
-      <div class="chapter-card-date">Chapter 6</div>
     </div>
-    <div class="chapter-card-content">
-      <h3 class="chapter-card-title">Context Engineering & Prompting Techniques</h3>
-      <p class="chapter-card-description">Master the art of effective prompting and context management for optimal AI assistance.</p>
-      <span class="chapter-card-link">Master prompting</span>
+    <div class="blog-card-content">
+      <span class="blog-date">Chapter 6</span>
+      <h3 class="blog-title"><a href="context-engineering/">Context Engineering & Prompting Techniques</a></h3>
+      <p class="blog-excerpt">Master the art of effective prompting and context management for optimal AI assistance.</p>
+      <a href="context-engineering/" class="read-more">Master prompting →</a>
     </div>
-  </a>
+  </article>
 
-  <a href="mini-project/" class="chapter-card">
-    <div class="chapter-card-image">
+  <article class="blog-card">
+    <div class="blog-card-image">
       <img src="images/project-hero.jpg" alt="Mini Project" onerror="this.style.display='none'">
-      <div class="chapter-card-date">Chapter 7</div>
     </div>
-    <div class="chapter-card-content">
-      <h3 class="chapter-card-title">Putting It All Together: Mini Project</h3>
-      <p class="chapter-card-description">Apply everything you've learned by building a complete project with GitHub Copilot.</p>
-      <span class="chapter-card-link">Build project</span>
+    <div class="blog-card-content">
+      <span class="blog-date">Chapter 7</span>
+      <h3 class="blog-title"><a href="mini-project/">Putting It All Together: Mini Project</a></h3>
+      <p class="blog-excerpt">Apply everything you've learned by building a complete project with GitHub Copilot.</p>
+      <a href="mini-project/" class="read-more">Build project →</a>
     </div>
-  </a>
+  </article>
 </div>
 
 ## Getting Started

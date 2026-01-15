@@ -1,9 +1,4 @@
-<div class="hero-section">
-  <img src="images/deep-dive-hero.jpg" alt="Copilot Deep Dive" onerror="this.style.display='none'">
-  <div class="hero-overlay">
-    <h1>Copilot Deep Dive: Concepts & Capabilities</h1>
-  </div>
-</div>
+# Copilot Deep Dive: Concepts & Capabilities
 
 Understand the fundamentals of GitHub Copilot, how it works, and what it can do.
 

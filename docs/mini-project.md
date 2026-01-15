@@ -1,9 +1,4 @@
-<div class="hero-section">
-  <img src="images/project-hero.jpg" alt="Mini Project" onerror="this.style.display='none'">
-  <div class="hero-overlay">
-    <h1>Putting It All Together: Mini Project</h1>
-  </div>
-</div>
+# Putting it all together: Mini Project
 
 Apply everything you've learned by building a complete application with GitHub Copilot.
 

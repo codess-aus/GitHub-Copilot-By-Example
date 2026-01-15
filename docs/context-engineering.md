@@ -1,9 +1,4 @@
-<div class="hero-section">
-  <img src="images/context-hero.jpg" alt="Context Engineering" onerror="this.style.display='none'">
-  <div class="hero-overlay">
-    <h1>Context Engineering & Prompting Techniques</h1>
-  </div>
-</div>
+# Context Engineering & Prompting Techniques
 
 Master the art of communicating effectively with GitHub Copilot through strategic context engineering and advanced prompting techniques.
 
