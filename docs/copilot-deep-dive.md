@@ -22,7 +22,11 @@ GitHub Copilot is an AI-powered code completion tool that helps you write code f
 3. **Pattern Recognition**: Identifies coding patterns and conventions
 4. **Suggestion Generation**: Creates contextually appropriate code
 
-### Context Window
+### Understanding the Mental Model
+
+To use Copilot effectively, it's crucial to understand how it "thinks" about code.
+
+#### The Context Window
 
 Copilot considers:
 
@@ -33,6 +37,256 @@ Copilot considers:
 
 !!! info "Context Matters"
     The more context you provide through comments and clear naming, the better Copilot's suggestions will be.
+
+#### How Context Processing Works
+
+**The Token System:**
+
+Copilot processes code as "tokens" (roughly chunks of characters):
+- Average token ≈ 4 characters
+- Context window ≈ 8,000 tokens
+- This means ~6,000 words or ~32,000 characters of context
+
+**What This Means for You:**
+
+```python
+# Copilot sees this in order of priority:
+# 1. Current cursor position (highest priority)
+# 2. Surrounding code in current file
+# 3. Code above cursor (more than below)
+# 4. Recently edited files
+# 5. Open tabs in editor
+# 6. Files in workspace (lowest priority)
+```
+
+**Context Priority Example:**
+
+=== "Python"
+
+    ```python
+    # This comment right at cursor = HIGHEST impact
+    def process_data(data):
+        # Cursor here
+        pass
+
+    # Code 5 lines above = HIGH impact
+    # Code 50 lines above = MEDIUM impact
+    # Code in other open files = LOW impact
+    # Code in closed files = MINIMAL impact
+    ```
+
+=== "C#"
+
+    ```csharp
+    // This comment right at cursor = HIGHEST impact
+    public void ProcessData(object data)
+    {
+        // Cursor here
+    }
+
+    // Code 5 lines above = HIGH impact
+    // Code 50 lines above = MEDIUM impact
+    // Code in other open files = LOW impact
+    // Code in closed files = MINIMAL impact
+    ```
+
+#### Pattern Recognition and Prediction
+
+**How Copilot Generates Suggestions:**
+
+1. **Analyzes Context**: Reads your code and comments
+2. **Identifies Patterns**: Recognizes coding patterns from training
+3. **Predicts Intent**: Infers what you're trying to accomplish
+4. **Generates Options**: Creates multiple possible completions
+5. **Ranks Suggestions**: Scores them by relevance
+6. **Presents Best Match**: Shows highest-scoring suggestion
+
+**Example of Pattern Recognition:**
+
+```python
+# Copilot recognizes this pattern:
+def calculate_average(numbers):
+    # Pattern: "calculate_average" + "numbers" 
+    # → Likely wants sum/len operation
+    return sum(numbers) / len(numbers)  # High confidence
+
+# vs unclear pattern:
+def calc(x):
+    # Pattern: "calc" + "x" 
+    # → Many possibilities, lower confidence
+```
+
+#### Why Certain Prompts Work Better
+
+**Clear Intent = Better Suggestions**
+
+❌ **Vague Prompt:**
+```python
+# do something
+def process(data):
+```
+*Low confidence: "do something" is ambiguous*
+
+✅ **Clear Prompt:**
+```python
+# Calculate the median value from a list of numbers, handling empty lists
+def calculate_median(numbers):
+```
+*High confidence: clear input, output, and edge case*
+
+**Specificity Hierarchy:**
+
+```
+Specificity Level              Suggestion Quality
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Generic comment               ⭐ Low
+Function name only            ⭐⭐ Low-Medium
+Name + types                  ⭐⭐⭐ Medium
+Name + types + comment        ⭐⭐⭐⭐ High
+Above + examples + context    ⭐⭐⭐⭐⭐ Excellent
+```
+
+#### Model Behavior and Limitations
+
+**Copilot's Strengths:**
+
+- **Pattern matching**: Excellent at recognized patterns
+- **Boilerplate**: Fast at repetitive code
+- **Common tasks**: Well-trained on frequent operations
+- **Multiple languages**: Works across many languages
+
+**Copilot's Limitations:**
+
+- **Novel problems**: Less effective on unique challenges
+- **Complex logic**: May oversimplify intricate algorithms
+- **Context boundaries**: Can't see beyond token limit
+- **Outdated patterns**: May suggest older approaches
+- **No runtime awareness**: Doesn't execute or test code
+
+**Understanding Why Copilot Makes Mistakes:**
+
+```python
+# Why this fails:
+def calculate_tax(amount, country):
+    # Copilot might suggest US tax rules
+    # because US tax code is more common in training data
+    # even if you need country-specific rules
+    
+# Better:
+def calculate_tax(amount, country):
+    """
+    Calculate tax based on country-specific rules.
+    For UK: 20% VAT
+    For AU: 10% GST
+    For US: varies by state
+    """
+    # Now Copilot has specific context
+```
+
+#### The Learning Effect
+
+**Copilot Adapts to Your Style:**
+
+Within a session, Copilot learns from:
+- Variable naming patterns you use
+- Code structure you prefer
+- Comments you write
+- Patterns you accept/reject
+
+```javascript
+// If you consistently use this pattern:
+const userData = await fetchUser(userId);
+const userPosts = await fetchPosts(userId);
+
+// Copilot learns and suggests similar:
+const userComments = await fetchComments(userId);
+// Matches your naming and structure
+```
+
+**File-Level Learning:**
+
+```python
+# Top of file establishes pattern:
+def get_user_by_id(user_id):
+    """Retrieve user by ID"""
+    return db.query(User).filter_by(id=user_id).first()
+
+def get_user_by_email(email):
+    """Retrieve user by email"""
+    return db.query(User).filter_by(email=email).first()
+
+# Later in file, Copilot suggests matching pattern:
+def get_user_by_username(username):
+    """Retrieve user by username"""
+    return db.query(User).filter_by(username=username).first()
+    # Matches established pattern automatically
+```
+
+#### Token Limit Implications
+
+**What Happens at Token Limits:**
+
+- Oldest context gets dropped first
+- Very large files may lose context
+- Multiple large open files compete for tokens
+
+**Strategies to Work Within Limits:**
+
+```python
+# ❌ Don't: Have 20 files open with no clear focus
+# ✅ Do: Close unrelated files, keep relevant ones open
+
+# ❌ Don't: Write one giant file with everything
+# ✅ Do: Modularize code into focused files
+
+# ❌ Don't: Rely on code 500 lines above
+# ✅ Do: Add comments reminding context locally
+```
+
+#### Confidence Scoring (How Copilot Decides)
+
+**Internal Decision Process:**
+
+```
+For each possible completion:
+1. Context match score (0-100)
+2. Pattern probability (0-100)
+3. Syntax validity (0-100)
+4. Style consistency (0-100)
+───────────────────────────────
+Average → Final confidence score
+```
+
+**High confidence → Gray suggestion appears**
+**Low confidence → No suggestion or waits**
+
+#### Practical Mental Model Summary
+
+```
+┌─────────────────────────────────────────┐
+│         Your Code + Comments            │
+│                  ↓                      │
+│         Tokenization (chunks)           │
+│                  ↓                      │
+│       Context Window (8k tokens)        │
+│                  ↓                      │
+│      Pattern Recognition Engine         │
+│                  ↓                      │
+│       Prediction Generation             │
+│                  ↓                      │
+│      Confidence Scoring                 │
+│                  ↓                      │
+│    Best Suggestion → Your Editor        │
+└─────────────────────────────────────────┘
+```
+
+**Key Takeaways:**
+
+1. **Context is everything**: Closer code = stronger influence
+2. **Clarity drives quality**: Clear intent = better suggestions
+3. **Patterns matter**: Established patterns get reinforced
+4. **Limits exist**: Token window is finite
+5. **It's probabilistic**: Not deterministic, based on likelihood
 
 ## Core Capabilities
 

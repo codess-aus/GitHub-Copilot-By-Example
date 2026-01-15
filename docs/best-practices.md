@@ -342,6 +342,292 @@ Use the feedback mechanism to report:
 - Share useful patterns and examples
 - Conduct training sessions
 
+## Daily Workflows with Copilot
+
+Integrate Copilot into your real-world development workflows for maximum productivity.
+
+### Starting Your Day
+
+**Morning Workflow:**
+
+1. **Review PRs with Copilot**
+   ```
+   # In PR review, use Copilot Chat:
+   "Summarize the changes in this PR"
+   "What are potential issues with this implementation?"
+   "Suggest improvements for this code"
+   ```
+
+2. **Check Issues and Plan**
+   ```
+   # Use Agent Mode to break down issues:
+   "Analyze issue #123 and suggest implementation approach"
+   "What files need to be modified for this feature?"
+   ```
+
+3. **Update Your Branch**
+   ```bash
+   git pull origin main
+   # Use Copilot Chat for merge conflicts:
+   "Explain this merge conflict and suggest resolution"
+   ```
+
+### Working on Features
+
+**Development Workflow:**
+
+1. **Scaffold the Feature** (Agent Mode)
+   ```
+   "Create a user profile editing feature with:
+   - API endpoints
+   - Validation
+   - Tests
+   - Documentation"
+   ```
+
+2. **Implement Details** (Inline Suggestions)
+   - Let suggestions guide implementation
+   - Accept and modify as needed
+   - Keep context clear with comments
+
+3. **Write Tests** (Copilot Chat)
+   ```
+   Select function → "/tests"
+   "Generate edge case tests for this function"
+   ```
+
+4. **Document** (Inline Suggestions)
+   ```python
+   def complex_function(data, options):
+       """
+       # Copilot generates comprehensive docstring
+   ```
+
+### Debugging Sessions
+
+**When Things Break:**
+
+1. **Understand the Error**
+   ```
+   # Copy error to Copilot Chat:
+   "Explain this error: TypeError: cannot read property 'id' of undefined"
+   ```
+
+2. **Find the Root Cause**
+   ```
+   "Analyze this function and identify potential null pointer issues"
+   ```
+
+3. **Generate Fix**
+   ```
+   "Suggest a fix for this race condition"
+   ```
+
+4. **Add Safeguards**
+   ```
+   "Add error handling to prevent this issue"
+   ```
+
+### Code Review Workflow
+
+**Reviewing Others' Code:**
+
+1. **Understand Changes**
+   ```
+   "Summarize what this PR does"
+   "Explain this algorithm"
+   ```
+
+2. **Check for Issues**
+   ```
+   "What security concerns exist in this code?"
+   "Are there any performance issues?"
+   "Check for edge cases not handled"
+   ```
+
+3. **Suggest Improvements**
+   ```
+   "How could this be more efficient?"
+   "Suggest better variable names"
+   ```
+
+**Being Reviewed:**
+
+- Use Copilot to pre-review your own code
+- Generate comprehensive PR descriptions
+- Add inline comments explaining complex logic
+
+### Refactoring Sessions
+
+**Improving Existing Code:**
+
+1. **Analyze Current State**
+   ```
+   "What are the problems with this implementation?"
+   "How can this be more maintainable?"
+   ```
+
+2. **Plan Refactoring**
+   ```
+   "Suggest a refactoring approach for this module"
+   "What design pattern would work better here?"
+   ```
+
+3. **Execute Safely**
+   - Use Agent Mode for multi-file refactoring
+   - Write tests first
+   - Refactor incrementally
+
+4. **Verify**
+   ```
+   "Generate comprehensive tests for the refactored code"
+   ```
+
+### Working with Legacy Code
+
+**Understanding Old Code:**
+
+1. **Get Context**
+   ```
+   "Explain what this legacy function does"
+   "What are the dependencies of this module?"
+   ```
+
+2. **Plan Updates**
+   ```
+   "How can I modernize this code safely?"
+   "Suggest a migration path to the new API"
+   ```
+
+3. **Add Tests**
+   ```
+   "Generate characterization tests for this legacy code"
+   ```
+
+### Integrating into Existing Projects
+
+**Adding Copilot to Current Work:**
+
+1. **Start Small**
+   - Use Inline suggestions for new code
+   - Try Chat for understanding existing code
+   - Avoid Agent Mode on unfamiliar codebase initially
+
+2. **Learn Project Patterns**
+   ```python
+   # Add context comments to teach Copilot your patterns:
+   """
+   Project Convention: All API responses use this format:
+   {
+       "success": bool,
+       "data": any,
+       "error": Optional[str]
+   }
+   """
+   ```
+
+3. **Gradually Increase Usage**
+   - Week 1: Inline suggestions only
+   - Week 2: Add Chat for questions
+   - Week 3: Use Agent Mode for new features
+
+### Team Collaboration
+
+**Working with Team Members:**
+
+1. **Share Effective Prompts**
+   ```markdown
+   # Team Wiki: Effective Copilot Prompts
+   - For API endpoints: "Create a {METHOD} endpoint for {resource} with validation and error handling"
+   - For tests: "Generate tests for {function} covering happy path and edge cases"
+   ```
+
+2. **Establish Standards**
+   - Always review Copilot suggestions
+   - Require tests for generated code
+   - Document Copilot-generated scaffolding
+
+3. **Pair Programming with Copilot**
+   - Use Copilot Chat during pair sessions
+   - Discuss suggestions together
+   - Learn from each other's prompting
+
+### Production Deployment Workflow
+
+**Shipping Copilot-Assisted Code:**
+
+1. **Pre-Deployment Checklist**
+   ```
+   # Use Copilot Chat to review:
+   "Check this code for security issues"
+   "Verify error handling is comprehensive"
+   "Confirm all edge cases are covered"
+   ```
+
+2. **Generate Deployment Docs**
+   ```
+   "Create deployment documentation for this feature"
+   "List configuration requirements"
+   ```
+
+3. **Monitor and Iterate**
+   - Use Copilot to quickly fix issues
+   - Generate hotfix tests
+   - Document lessons learned
+
+### Time Management
+
+**Typical Day Breakdown:**
+
+- **Planning (15 min)**: Use Agent Mode to break down tasks
+- **Implementation (3-4 hours)**: Inline suggestions + Chat
+- **Testing (1 hour)**: Chat for test generation
+- **Code Review (1 hour)**: Chat for reviewing others' code
+- **Documentation (30 min)**: Inline suggestions for docs
+- **Bug Fixes (variable)**: Chat for debugging
+
+### Efficiency Tips
+
+!!! success "Maximize Productivity"
+    - **Keep context files open**: Copilot learns from open files
+    - **Write clear comments first**: Better suggestions follow
+    - **Use keyboard shortcuts**: Accept/reject suggestions quickly
+    - **Batch similar tasks**: Context stays consistent
+    - **Take breaks**: Copilot works better with fresh context
+
+!!! tip "Daily Habits"
+    - Start with most complex task (Agent Mode)
+    - Use Chat when stuck (don't waste time)
+    - Review suggestions critically (maintain quality)
+    - Share learnings with team (improve together)
+
+### Common Workflow Patterns
+
+**Pattern 1: Feature Development**
+```
+1. Agent Mode: Scaffold structure
+2. Inline: Implement business logic
+3. Chat: Generate tests
+4. Chat: Document
+5. Inline: Refine and polish
+```
+
+**Pattern 2: Bug Fix**
+```
+1. Chat: Understand the bug
+2. Inline: Implement fix
+3. Chat: Generate regression test
+4. Inline: Add error handling
+```
+
+**Pattern 3: Code Review**
+```
+1. Chat: Summarize changes
+2. Chat: Check for issues
+3. Inline: Suggest improvements
+4. Chat: Verify fix approaches
+```
+
 ## Compliance Checklist
 
 Before committing Copilot-generated code:

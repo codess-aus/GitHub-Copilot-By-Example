@@ -2,6 +2,126 @@
 
 Explore advanced features of GitHub Copilot including agent mode, integrations with development tools, and extensions.
 
+## When to Use What: Choosing the Right Copilot Tool
+
+Understanding when to use each Copilot feature is crucial for maximizing productivity.
+
+### Decision Framework
+
+```
+Simple completion needed?
+├─ Yes → Use Inline Suggestions
+└─ No → Need explanation or multi-step?
+    ├─ Quick question → Use Copilot Chat
+    └─ Complex task → Use Agent Mode
+```
+
+### Inline Suggestions
+
+**Best For:**
+- Completing current line or function
+- Implementing well-defined patterns
+- Generating boilerplate code
+- Quick autocomplete-style assistance
+
+**When to Use:**
+- You know exactly what you need
+- Writing standard implementations
+- Following established patterns
+- Speed is priority
+
+**Example Scenarios:**
+```python
+# Writing standard CRUD operations
+def get_user_by_id(user_id):
+    # Inline suggestion completes the query
+```
+
+```javascript
+// Implementing common patterns
+async function fetchData(url) {
+    // Suggestion provides try-catch with fetch
+}
+```
+
+### Copilot Chat
+
+**Best For:**
+- Understanding existing code
+- Getting explanations
+- Exploring different approaches
+- Quick refactoring suggestions
+- Debugging help
+- Generating tests for specific code
+
+**When to Use:**
+- You need to understand something
+- Exploring implementation options
+- Need explanation of errors
+- Want multiple approaches
+- Reviewing code sections
+
+**Example Scenarios:**
+- "Explain how this authentication middleware works"
+- "What's the time complexity of this algorithm?"
+- "Suggest a more efficient way to implement this"
+- "Generate unit tests for this function"
+- "Why might this code cause a memory leak?"
+
+### Agent Mode
+
+**Best For:**
+- Multi-file operations
+- Scaffolding entire features
+- Complex refactoring across files
+- Architectural implementations
+- End-to-end feature development
+
+**When to Use:**
+- Building complete features
+- Need changes across multiple files
+- Implementing complex workflows
+- Setting up new components
+- Large-scale refactoring
+
+**Example Scenarios:**
+- "Create a REST API with user authentication"
+- "Add a payment processing system"
+- "Refactor this to use dependency injection"
+- "Implement caching across the application"
+- "Set up a new microservice with logging"
+
+### Comparison Table
+
+| Feature | Speed | Scope | Context | Best Use Case |
+|---------|-------|-------|---------|---------------|
+| **Inline** | ⚡⚡⚡ Fast | Single line/block | Current file | Quick completions |
+| **Chat** | ⚡⚡ Medium | File/concept | Current selection + workspace | Questions & exploration |
+| **Agent** | ⚡ Slower | Multi-file/system | Entire workspace | Complex features |
+
+### Workflow Integration
+
+**Typical Development Flow:**
+
+1. **Starting a new feature** → Use Agent Mode to scaffold structure
+2. **Implementing details** → Use Inline Suggestions for code
+3. **Stuck on logic** → Use Chat to explore approaches
+4. **Writing tests** → Use Chat to generate test cases
+5. **Refining code** → Use Inline for adjustments
+
+### Best Practices
+
+!!! tip "Combine Tools Effectively"
+    - Start with Agent Mode for structure
+    - Use Inline for implementation
+    - Use Chat when you need to think through problems
+    - Don't be afraid to switch between tools
+
+!!! warning "Avoid Tool Misuse"
+    - Don't use Agent Mode for simple completions (overkill)
+    - Don't rely only on Inline for complex logic (insufficient)
+    - Don't use Chat for everything (slower workflow)
+
 ## Copilot Agent Mode
 
 ### What is Agent Mode?

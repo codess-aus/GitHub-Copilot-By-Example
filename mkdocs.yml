@@ -28,8 +28,8 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: Inter
+    code: Fira Code
   features:
     - navigation.tabs
     - navigation.sections
