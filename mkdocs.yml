@@ -79,7 +79,7 @@ markdown_extensions:
 
 # Extra CSS
 extra_css:
-  - stylesheets/custom-design.css
+  - stylesheets/extra.css
 
 # Extra JavaScript
 extra_javascript:
